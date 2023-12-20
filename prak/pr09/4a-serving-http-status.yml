@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1 
+kind: Service 
+metadata:
+  name: serving-http-status
+spec:
+  template:
+    metadata:
+      name: serving-http-status-v1
+    spec:
+      containers:
+      - image: aphesis/http-status-code:200
+        ports:
+        - containerPort: 80
+

@@ -1,0 +1,7 @@
+- name: Install basic packages
+  ansible.builtin.apt:
+        name:
+          - curl
+          - qemu-guest-agent
+          - bridge-utils
+        state: latest
